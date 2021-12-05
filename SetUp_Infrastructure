@@ -19,3 +19,12 @@ Azure Event Hub:
 * Event Hub does not support cloud-to-device messaging 
 * Cannot be used with Azure Security Center for IOT
 
+In the following example:
+az group create -l westus -n RGOI 
+az iot hub create -n Hub01 -g RGOI --sku Sl 
+
+The -l parameter (a short form for the --location parameter) specifies the target Azure region, and westus is the value for West US. 
+The -n parameter is a short form for the --name parameter in the az group create Azure CLI command. 
+The -g parameter is a short form for --the resource-group parameter in the az iot hub create Azure CLI command. 
+Example Sl as the value for the -sku parameter. This specifies one of the Standard pricing tiers for the new Azure IOT Hub. 
+

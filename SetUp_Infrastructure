@@ -37,3 +37,12 @@ S3 Standard supports up to 300,000,000 messages per day, per unit.
 Tier Sl Standard, 400,000 messages per day. 
 Tier S2 standard, 6,000,000 messages per day. 
 
+The az iot hub create command has two required parameters: name, and resource-group. 
+
+The following command would create an IOT hub named ExampleHub in the ExampleRG resource group: 
+az iot hub create --resource-group ExampleRG --name ExampleHub
+
+--sku parameter. This optional parameter allows you to specify the pricing tier for the Azure IOT Hub. The default value is tier Sl. 
+--retention-day parameter. This optional parameter allows you to specify how long a hub will store device-to-cloud events. The default value is one day. 
+--only-show-errors parameter. This optional parameter allows you to suppress warnings and only show errors. The default is to show both warnings and errors. 
+

@@ -46,3 +46,22 @@ az iot hub create --resource-group ExampleRG --name ExampleHub
 --retention-day parameter. This optional parameter allows you to specify how long a hub will store device-to-cloud events. The default value is one day. 
 --only-show-errors parameter. This optional parameter allows you to suppress warnings and only show errors. The default is to show both warnings and errors. 
 
+Desired properties of the JSON document. 
+* A device app can read the desired properties. 
+* The desired properties are set by the back end-solution. 
+* An example of a desired property is the telemetry send frequency. 
+* The device app can read the desired properties and adjust how often it sends messages
+* The device app can also receive notifications of changes to the desired properties
+
+Reported properties of the JSON document. 
+* A device app can write to the reported properties. 
+The device app can set the reported properties and the back-end solution can read and query reported properties. 
+
+Tags: 
+* A device app does not have access to the tags in the device twin JSON document. 
+* Tags are used by the back-end solution not the device app. 
+
+* modulesContent: 
+* The modulesContent section is in the deployment manifest for IOT Edge
+* It is used by the IOT Edge runtime to configure the modules on the device. 
+

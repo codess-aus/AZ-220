@@ -28,3 +28,12 @@ The -n parameter is a short form for the --name parameter in the az group create
 The -g parameter is a short form for --the resource-group parameter in the az iot hub create Azure CLI command. 
 Example Sl as the value for the -sku parameter. This specifies one of the Standard pricing tiers for the new Azure IOT Hub. 
 
+Azure IOT Hub offers two subscription tiers, Basic (B) and Standard (S). 
+Each tier offers different features. 
+Each tier is further divided into three sizes, 1 through 3. 
+The size determines the number of messages the hub can handle on a daily basis. 
+You can purchase multiple units of the same size to scale up the daily message limit. 
+S3 Standard supports up to 300,000,000 messages per day, per unit. 
+Tier Sl Standard, 400,000 messages per day. 
+Tier S2 standard, 6,000,000 messages per day. 
+

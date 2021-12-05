@@ -1,0 +1,21 @@
+Set Up the IoT Solution Infrastructure (10-15%)
+
+Azure IOT Hub on the Sl Standard tier: 
+* This tier supports bi-directional (device-to-cloud and cloud-to-device) messaging
+* The only pricing tier of Azure IOT Hub that supports the use of Azure Security Center for IOT
+
+Azure IOT Hub on the Free tier: 
+* This tier is mainly used for evaluation and testing 
+* supports bi-directional messaging with IOT devices 
+* Cannot be used with Azure Security Center for IOT
+
+Azure IOT Hub on the B2 Basic tier: 
+* This tier supports uni-directional (device-to-cloud) messaging only 
+* It cannot be used with Azure Security Center for IOT
+
+Azure Event Hub:
+* Azure Event Hub supports device-to-cloud messaging
+* You should use Azure IOT Hub for communication and management of IOT devices because of its additional security, monitoring, and provisioning capabilities
+* Event Hub does not support cloud-to-device messaging 
+* Cannot be used with Azure Security Center for IOT
+

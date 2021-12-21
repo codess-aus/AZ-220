@@ -80,3 +80,16 @@ You should not generate a CSR. A CSR is submitted to a CA when you request an X.
 You should not create an Azure IOT Hub device using the X.509 CA Signed authentication type. You can use this method when the X.509 certificate has been created and validated by a public CA. 
 You should not obtain a certificate from a public certification authority. A public certification authority is a trusted entity that uses its own methods for validating a certificate requestor before issuing the certificate. 
 
+You should use IOT Hub Device SDKs to build an app to run on an IOT device and send the movement sensor telemetry to Azure IOT Hub. These SDKs are available for .Net, C, Java, Node.js, Python, and iOS. 
+They can help you build edge solutions for sending telemetry to or receiving messages from Azure IOT Hub. 
+
+You should use *IOT Hub Service SDKs* to build a backend application to send desired property updates to the remote IOT devices. 
+These SDKs are available for .Net, C, Java, Node.js, Python, and iOS. They can help 
+you build the backend to manage Azure IOT hubs, schedule required jobs, invoke direct methods, or send desired property updates to remote IOT devices or modules. 
+
+You should use Provisioning Device SDKs to build an app to run on an IOT device for communication with the Device Provisioning Service (DPS). These SDKs are available for C, C#, Java, Node.js, and Python. They 
+can be used as an example during initial boot-up to enroll your device with Azure IOT Hub DPS. 
+
+You should use Provisioning Service SDKs to build a backend application to manage enrollments in the DPS. These SDKs are available for C, C#, Java, Node.js, and Python. 
+
+Microsoft Graph SDKs: These SDKs can be used to programmatically access data in Office 365, Windows 10, and Enterprise Mobility + Security via Microsoft Graph API. 

@@ -101,3 +101,20 @@ You should choose device twin to change the telemetry send frequency on the devi
 
 Direct method is used to send commands to the device that requires immediate action. 
 
+You are configuring IOT device communication protocols. You need to recommend an appropriate protocol based on the following requirements: 
+• Communication over high-latency networks must be supported. 
+• The protocol footprint must be minimal, requiring less than IMB RAM. 
+• The protocol must use commonly open firewall ports. 
+Which communication protocol should you use? 
+
+MQTT over WebSockets: MQTT was designed to be lightweight both operationally and from a code footprint standpoint. This is ideally suited to environments where latency may be introduced due to unreliable communication methods. MQTT over WebSockets operates over port 443, which is a commonly open firewall port for HTTPS. 
+
+MQTT: MQTT operates natively over port 8883, which is not a commonly open firewall port. 
+
+AMQP: Like MQTT, AMQP is commonly used in IOT communications. AMQP is more robust than MQTT, offers a broader set of features, and can take advantage of connection multiplexing. As a result, the AMQP footprint is larger than MQTT, and it is not used on devices with less than IMB RAM. 
+AMQP operates over port 5671. 
+
+AMQP over WebSockets: AMQP over WebSockets is not used on devices with less than IMB RAM. AMQP over WebSockets operates over port 443. 
+
+HTTPS: HTTPS is recommended only for devices that do not support MQTT or AQMP because it was not designed for IOT device communications. While HTTPS has a smaller footprint than AQMP, this requires larger payloads to transfer the same information than MQTT or AQMP. MQTT is better for high-latency communications. 
+

@@ -92,3 +92,12 @@ You should use **Provisioning Device SDKs** to build an app to run on an IOT dev
 You should use **Provisioning Service SDKs** to build a backend application to manage enrollments in the DPS. These SDKs are available for C, C#, Java, Node.js, and Python. 
 
 Microsoft Graph SDKs: These SDKs can be used to programmatically access data in Office 365, Windows 10, and Enterprise Mobility + Security via Microsoft Graph API. 
+
+You should choose device-to-cloud messages to send telemetry data from a permanently connected device to the IOT hub. IOT Hub has a built-in service endpoint that can be used by the device app to send telemetry messages from your devices. Messages are limited to 256 KB. 
+
+You should choose file upload to send telemetry data batches for an intermittently connected device to the IOT hub. The size of the file is limited only by Azure storage limits. 
+
+You should choose device twin to change the telemetry send frequency on the device for a long-running command. Device twin desired properties are changed on the IOT hub. The device app receives a notification, and can read the new property, and react accordingly. 
+
+Direct method is used to send commands to the device that requires immediate action. 
+

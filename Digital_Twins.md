@@ -11,3 +11,10 @@ Azure Digital Twins can be used to build customized, connected solutions that:
 Digital twins (in Azure Digital Twins) and device twins (in IoT Hub) may sound similar, but they are two different things. 
 IoT Hub device twins often focus on describing the aspects and capabilities of a device itself, while digital twins are more conceptual representations that can store user-defined insights about a digital entity or many related entities (entities that could be representing a device or many related devices). 
 It is also worth noting that IoT Hub device twins can be connected to Azure Digital Twins (the service) as part of an end-to-end solution that represents devices across services.
+
+What is the relationship between an Azure Digital Twins model and a digital twin?
+A digital twin is an instance of an ADT model.
+
+What is the name of the coding format used to define Azure Digital Twins models?
+Digital Twins Definition Language (DTDL) is the name of the coding format used to define Azure Digital Twins models.
+

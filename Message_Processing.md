@@ -1,4 +1,4 @@
-
+<img src="https://github.com/codess-aus/AZ-220/blob/main/assets/AIOTRA.png" alt="Azure IOT Reference Architecture Diagram">
 
 
 Message processing involves a broad spectrum of protocols, services, and standards. Here are some of the topics that can be investigated in more depth:

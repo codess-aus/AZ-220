@@ -16,3 +16,15 @@
 * query the Azure Digital Twins graph
 * update properties on Azure Digital Twins entities in the graph
 * monitor and troubleshoot Azure Digital Twins
+
+1. What is the relationship between an Azure Digital Twins model and a digital twin? 
+* An ADT model is an instance of a digital twin. 
+** * A digital twin is an instance of an ADT model**
+* An ADT model contains the digital twins for your ADT environment. 
+
+2. What is the name of the coding format used to define Azure Digital Twins models? 
+* Extensible Application Markup Language. 
+* Azure Digital Twins Modeling Language. 
+** * Digital Twins Definition Language**
+
+Correct. Digital Twins Definition Language (DTDL) is the name of the coding format used to define Azure Digital Twins models.

@@ -22,7 +22,7 @@ Configure physical IoT devices
 * configure device networking, topology, and connectivity
 
 
-Provision and manage devices (15-20%)
+[Provision and manage devices (15-20%)](https://github.com/codess-aus/AZ-220/blob/main/ProvisionDevices.md)
 Set up an IoT Hub Device Provisioning Service (DPS)
 * create a DPS instance
 * create a new enrollment in DPS
@@ -54,7 +54,7 @@ Manage IoT devices by using Azure IoT Central
 * run IoT Central jobs
 * interact with IoT Central devices using the REST APIs
 
-Implement IoT Edge (15-20%)
+[Implement IoT Edge (15-20%)](https://github.com/codess-aus/AZ-220/blob/main/Implement_Edge.md)
 
 Set up an IoT Edge device
 * create a device identity in IoT Hub
@@ -87,7 +87,7 @@ Configure an IoT Edge device
 * implement and configure offline support (including local storage)
 * create a layered hierarchy of IoT Edge devices
 
-Implement Business Integration (5-10%)
+[Implement Business Integration (5-10%)](https://github.com/codess-aus/AZ-220/blob/main/Bus_int.md)
 
 Integrate with upstream and downstream systems
 * set up input and output connections
@@ -105,7 +105,7 @@ Develop Azure Digital Twins solutions
 * update properties on Azure Digital Twins entities in the graph
 * monitor and troubleshoot Azure Digital Twins
 
-Process and Manage Data (15-20%)
+[Process and Manage Data (15-20%)](https://github.com/codess-aus/AZ-220/blob/main/Process_Manage.md)
 Configure message routing in Azure IoT Hub
 * implement message enrichment in IoT Hub
 * implement routing of IoT device messages to endpoints
@@ -128,9 +128,9 @@ Process real-time data by using Azure Time Series Insights
 * create a Time Series Insights environment
 * connect IoT Hub and the Time Series Insights environment
 * create a reference data set for a Time Series Insights environment by using the Azure portal
-implement Time Series Model hierarchies, types, and instance fields
+implement Time Series Model hierarchies, types, and instance fields consume data by using Time Series Expression syntax 
 
-consume data by using Time Series Expression syntax Monitor, Troubleshoot, and Optimize IoT Solutions (15-20%)
+[Monitor, Troubleshoot, and Optimize IoT Solutions (15-20%)](https://github.com/codess-aus/AZ-220/blob/main/Monitor_TS_Optimise.md)
 
 Configure health monitoring
 * configure metrics in IoT Hub
@@ -155,7 +155,7 @@ Ensure performance and availability
 * troubleshoot message loss
 * test manual failover
 
-Implement Security (10-15%)
+[Implement Security (10-15%)](https://github.com/codess-aus/AZ-220/blob/main/ImplementSec.md)
 Implement security for IoT devices and services
 * implement device and gateway security
 * ensure secure connections

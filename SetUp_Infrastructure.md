@@ -121,3 +121,31 @@ HTTPS: HTTPS is recommended only for devices that do not support MQTT or AQMP be
 HTTPS is a common Internet protocol traditionally used to transfer data between clients and web servers. However, its use has been expanded to include a variety of other 
 scenarios, like IOT. Message Queue Telemetry Transport (MQTT) and Advanced Message Queuing Protocol (AMQP) support file uploads, but HTTPS is required when uploading from a physical IOT device e.g. an IOT camera that uploads large media files.
 
+Cloud-to-device pattern. HTTPS does not have an efficient way to implement server push. As such, when you are using HTTPS, devices poll IoT Hub for cloud-to-device messages. This approach is inefficient for both the device and IoT Hub. Under current HTTPS guidelines, each device should poll for messages every 25 minutes or more. Issuing more HTTPS receives results in IoT Hub throttling the requests. MQTT and AMQP support server push when receiving cloud-to-device messages. They enable immediate pushes of messages from IoT Hub to the device. If delivery latency is a concern, MQTT or AMQP are the best protocols to use. For rarely connected devices, HTTPS works as well.
+
+Field gateways. MQTT and HTTPS support only a single device identity (device ID plus credentials) per TLS connection. For this reason, these protocols are not supported for field gateway scenarios that require multiplexing messages using multiple device identities across a single or a pool of upstream connections to IoT Hub. Such gateways can use a protocol that supports multiple device identities per connection, like AMQP, for their upstream traffic.
+
+Low resource devices. The MQTT and HTTPS libraries have a smaller footprint than the AMQP libraries. As such, if the device has limited resources (for example, less than 1-MB RAM), these protocols might be the only protocol implementation available.
+
+Network traversal. The standard AMQP protocol uses port 5671, and MQTT listens on port 8883. Use of these ports could cause problems in networks that are closed to non-HTTPS protocols. Use MQTT over WebSockets, AMQP over WebSockets, or HTTPS in this scenario.
+
+Payload size. MQTT and AMQP are binary protocols, which result in more compact payloads than HTTPS.
+
+When using HTTPS, each device should poll for cloud-to-device messages no more than once every 25 minutes. In development, each device can poll more frequently, if desired.
+
+The following functionality for devices that use X.509 certificate authority (CA) authentication is not yet generally available, and preview mode must be enabled:
+
+HTTPS, MQTT over WebSockets, and AMQP over WebSockets protocols.
+File uploads (all protocols).
+It is generally available on devices that use X.509 thumbprint authentication. To learn more about X.509 authentication with IoT Hub, see Supported X.509 certificates.
+
+Port numbers
+Devices can communicate with IoT Hub in Azure using various protocols. Typically, the choice of protocol is driven by the specific requirements of the solution. The following table lists the outbound ports that must be open for a device to be able to use a specific protocol:
+
+PORT NUMBERS
+Protocol	Port
+MQTT	8883
+MQTT over WebSockets	443
+AMQP	5671
+AMQP over WebSockets	443
+HTTPS	443

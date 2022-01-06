@@ -1,7 +1,7 @@
 # AZ-220
 Azure IOT Developer Exam Prep
 
-[Set Up the IoT Solution Infrastructure (10-15%)](https://github.com/codess-aus/AZ-220/blob/main/SetUp_Infrastructure)
+[Set Up the IoT Solution Infrastructure (10-15%)](https://github.com/codess-aus/AZ-220/blob/main/SetUp_Infrastructure.md)
 
 * Create and configure an IoT Hub
 * create an IoT Hub

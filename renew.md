@@ -38,10 +38,21 @@ The IoT Edge agent is the other module that makes up the Azure IoT Edge runtime.
 
 The IoT Edge security daemon starts the IoT Edge agent on device startup. The agent retrieves its module twin from IoT Hub and inspects the deployment manifest. The deployment manifest is a JSON file that declares the modules that need to be started.
 
-
-
 ## IoT Edge cloud interface
 
 It's difficult to manage the software life cycle for millions of IoT devices that are often different makes and models or geographically scattered. Workloads are created and configured for a particular type of device, deployed to all of your devices, and monitored to catch any misbehaving devices. These activities can't be done on a per device basis and must be done at scale.
 
 ![IOT Edge Cloud Interface diagram](https://github.com/codess-aus/AZ-220/blob/main/assets/m06-l01-cloud-interface-27b30369.png)
+
+## Azure IoT Edge modules
+
+- A module image is a package containing the software that defines a module.
+- A module instance is the specific unit of computation running the module image on an IoT Edge device. The module instance is started by the IoT Edge runtime.
+- A module identity is a piece of information (including security credentials) stored in IoT Hub, that is associated to each module instance.
+- A module twin is a JSON document stored in IoT Hub, that contains state information for a module instance, including metadata, configurations, and conditions.
+
+### EdgeAgent desired properties
+The module twin for the IoT Edge agent is called $edgeAgent and coordinates the communications between the IoT Edge agent running on a device and IoT Hub. The desired properties are set when applying a deployment manifest on a specific device as part of a single-device or at-scale deployment.
+
+### EdgeHub desired properties
+The module twin for the IoT Edge hub is called $edgeHub and coordinates the communications between the IoT Edge hub running on a device and IoT Hub. The desired properties are set when applying a deployment manifest on a specific device as part of a single-device or at-scale deployment.

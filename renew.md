@@ -60,9 +60,9 @@ The module twin for the IoT Edge hub is called $edgeHub and coordinates the comm
 
 
 1. Which of the following choices is a required component for an Azure IOT Edge implementation? 
-### - IOT Edge modules 
-- IOT Edge gateway 
--  Linux OS 
+### 1 IOT Edge modules 
+2 IOT Edge gateway 
+3  Linux OS 
 
 2. Which of the following choices describes the purpose of the IOT Edge hub? 
 - The IOT Edge hub is responsible for deploying and monitoring the edge modules for the IOT Edge device

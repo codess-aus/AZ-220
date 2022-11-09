@@ -56,3 +56,23 @@ The module twin for the IoT Edge agent is called $edgeAgent and coordinates the 
 
 ### EdgeHub desired properties
 The module twin for the IoT Edge hub is called $edgeHub and coordinates the communications between the IoT Edge hub running on a device and IoT Hub. The desired properties are set when applying a deployment manifest on a specific device as part of a single-device or at-scale deployment.
+
+
+
+1. Which of the following choices is a required component for an Azure IOT Edge implementation? 
+- **IOT Edge modules** 
+- IOT Edge gateway 
+-  Linux OS 
+
+2. Which of the following choices describes the purpose of the IOT Edge hub? 
+- **The IOT Edge hub is responsible for deploying and monitoring the edge modules for the IOT Edge device. **
+- The IOT Edge hub is responsible for managing communication between modules and with downstream 
+devices. 
+- The IOT Edge hub is responsible for configuring device settings when the Edge device is configured as an Edge gateway. 
+
+3. What is the purpose of the IOT Edge agent? 
+- **The IOT Edge agent is responsible for deploying and monitoring the Edge modules for the IOT Edge device. **
+- The IOT Edge agent is responsible for managing communication between modules and with downstream devices. 
+- The IOT Edge agent is responsible for configuring device settings when the Edge device is configured as an Edge gateway. 
+
+

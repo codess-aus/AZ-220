@@ -8,6 +8,26 @@
 
 ![IOT Edge Runtime diagram](https://github.com/codess-aus/AZ-220/blob/main/assets/m06-l01-iot-edge-runtime-introduction-fc026798.png)
 
+The IoT Edge runtime is a collection of programs that turn a device into an IoT Edge device. 
+Collectively, the IoT Edge runtime components enable IoT Edge devices to receive code to run at the edge and communicate the results.
+
+The IoT Edge runtime is responsible for the following functions on IoT Edge devices:
+
+- Install and update workloads on the device.
+- Maintain Azure IoT Edge security standards on the device.
+- Ensure that IoT Edge modules are always running.
+- Report module health to the cloud for remote monitoring.
+- Manage communication between downstream devices and IoT Edge devices.
+- Manage communication between modules on the IoT Edge device.
+- Manage communication between the IoT Edge device and the cloud.
+- Manage communication between IoT Edge devices.
+
+These responsibilities can be grouped into two categories, communication and module management, which are performed by two corresponding components of the IoT Edge runtime. 
+The **IoT Edge hub** is responsible for **communication**, 
+The **IoT Edge agent** **deploys and monitors** the modules.
+
+Both the IoT Edge hub and the IoT Edge agent are modules, just like any other module running on an IoT Edge device. They're sometimes referred to as the runtime modules.
+
 ## IoT Edge cloud interface
 
 It's difficult to manage the software life cycle for millions of IoT devices that are often different makes and models or geographically scattered. Workloads are created and configured for a particular type of device, deployed to all of your devices, and monitored to catch any misbehaving devices. These activities can't be done on a per device basis and must be done at scale.

@@ -12,4 +12,4 @@
 
 It's difficult to manage the software life cycle for millions of IoT devices that are often different makes and models or geographically scattered. Workloads are created and configured for a particular type of device, deployed to all of your devices, and monitored to catch any misbehaving devices. These activities can't be done on a per device basis and must be done at scale.
 
-![IOT Edge Cloud Interface diagram](https://github.com/codess-aus/AZ-220/blob/main/assets/m06-l01-iot-edge-runtime-introduction-fc026798.png)
+![IOT Edge Cloud Interface diagram](https://github.com/codess-aus/AZ-220/blob/main/assets/m06-l01-cloud-interface-27b30369.png)

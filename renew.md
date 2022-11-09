@@ -6,4 +6,4 @@
 
 ## IOT Edge Runtime
 
-![IOT Edge Runtime diagram](image.jpg)
+![IOT Edge Runtime diagram](https://github.com/codess-aus/AZ-220/blob/main/assets/m06-l01-iot-edge-runtime-introduction-fc026798.png)

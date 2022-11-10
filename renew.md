@@ -83,3 +83,18 @@ There are three patterns for using an IoT Edge device as a gateway: transparent,
 **Identity translation** - Devices that cannot connect to IoT Hub directly can connect to a gateway device instead. The gateway provides IoT Hub identity and protocol translation on behalf of the downstream devices. The gateway is smart enough to understand the protocol used by the downstream devices, provide them identity, and translate IoT Hub primitives. Downstream devices appear in IoT Hub as first-class devices with twins and methods. A user can interact with the devices in IoT Hub and is unaware of the intermediate gateway device.
 
 ![Patterns](https://github.com/codess-aus/AZ-220/blob/main/assets/m06-l03-iot-edge-gateway-8836b3a3.png)
+
+Q: A developer wants to connect devices that aren't IP-enabled to an IoT hub using an IoT Edge gateway device. The developer wants each device to appear as a separate device in IoT Hub. Which IoT Edge gateway pattern should the developer use?
+* Transparent
+* Protocol translation
+* Identity Translation
+
+A: When you use the Identity translation gateway pattern, non-IP enabled downstream devices appear in IoT Hub as first-class devices with twins and methods.
+
+A developer wants to connect devices that aren't IP-enabled to an IoT hub using an IoT Edge gateway device. The developer wants only the IoT Edge gateway device to have an identity in IoT Hub. Which IoT Edge gateway pattern should the developer use?
+* Transparent
+* Protocol translation
+* Identity Translation
+A: When you use the Protocol translation gateway pattern, devices that don't support MQTT, AMQP, or HTTP can use a gateway device to send data to IoT Hub on their behalf. Only the gateway device has an identity in IoT Hub.
+
+

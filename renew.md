@@ -152,3 +152,67 @@ Rules in IoT Central serve as a customizable response tool that triggers on acti
 Q: What is the purpose of a Dashboard within an Azure IoT Central solution?
 A: A Dashboard is a customizable page that displays telemetry, property, and state information for selected devices.
 
+### Phased rollout
+A phased rollout is an overall process whereby an operator deploys changes to a broadening set of IoT Edge devices. The goal is to make changes gradually to reduce the risk of making wide scale breaking changes.
+
+### Layered deployment
+Layered deployments are automatic deployments that can be combined together to reduce the number of unique deployments that need to be created. Layered deployments are useful in scenarios where the same modules are reused in different combinations in many automatic deployments.
+
+Layered deployments have the same basic components as any automatic deployment. They target devices based on tags in the device twins, and provide the same functionality around labels, metrics, and status reporting. Layered deployments also have priorities assigned to them, but instead of using the priority to determine which deployment is applied to a device, the priority determines how multiple deployments are ranked on a device. For example, if two layered deployments have a module or a route with the same name, the layered deployment with the higher priority will be applied while the lower priority is overwritten.
+
+The system runtime modules, edgeAgent and edgeHub, are not configured as part of a layered deployment. Any IoT Edge device targeted by a layered deployment needs a standard automatic deployment applied to it first. The automatic deployment provides the base upon which layered deployments can be added.
+
+An IoT Edge device can apply one and only one standard automatic deployment, but it can apply multiple layered automatic deployments. Any layered deployments targeting a device must have a higher priority than the automatic deployment for that device.
+
+The **deployment manifest** is a JSON document that describes:
+
+* The IoT Edge agent module twin, which includes three components.
+  - The container image for each module that runs on the device.
+  - The credentials to access private container registries that contain module images.
+  - Instructions for how each module should be created and managed.
+* The IoT Edge hub module twin, which includes how messages flow between modules and eventually to IoT Hub.
+* Optionally, the desired properties of any other module twins
+
+Two modules are required in every deployment manifest: $edgeAgent, and $edgeHub. These modules are part of the IoT Edge runtime that manages the IoT Edge device and the modules running on it.
+
+IoT Edge devices can be anything from a Raspberry Pi to a laptop to a virtual machine running on a server. You may have access to the device either physically or through a virtual connection, or it may be isolated for extended periods of time. Either way, you want to make sure that it's configured to work appropriately.
+
+Important
+* Install production certificates.
+* Have a device management plan.
+* Use Moby as the container engine.
+
+Helpful
+* Choose upstream protocol.
+
+The two runtime modules both have an UpstreamProtocol environment variable. The valid values for the variable are:
+* MQTT
+* AMQP
+* MQTTWS
+* AMQPWS
+Configure the UpstreamProtocol variable for the IoT Edge agent in the config.yaml file on the device itself
+
+In the high-level deployment process for IoT Edge modules, Retrieve the status of the devices after configuration.
+Retrieving the status of the devices after configuration helps to verify that the module deployed successfully.
+
+Q: What is an IoT Edge deployment manifest used for?
+A: It tells your device which modules to install and how to configure them to work together.
+The deployment manifest is a JSON document that tells your device which modules to install and how to configure them to work together.
+
+## Time to live
+The time to live setting is the amount of time (in seconds) that a message can wait to be delivered before it expires. The default is 7200 seconds (two hours). The maximum value is only limited by the maximum value of an integer variable, which is around 2 billion. This setting is a desired property of the IoT Edge hub, which is stored in the module twin. You can configure it in the Azure portal or directly in the deployment manifest.
+
+After an initial one-time sync with IoT Hub, IoT Edge devices can function indefinitely offline.
+IoT Edge devices can function indefinitely offline after the initial, one-time sync. However, storage of messages depends on the time to live (TTL) setting and the available disk space for storing the messages.
+
+Q: A developer for a company has discovered that they are losing data during periods when the local WiFi signal is lost and devices are offline. The developer investigates whether IoT Edge provides a solution for this problem. Which of the following answer choices accurately describes using Azure Blob Storage for IoT Edge devices?
+* It uses a blob storage module to provide a block blob storage solution on your IoT Edge device.
+* It uses the IoT Edge hub module to provide a block blob storage solution on your IoT Edge device.
+* It uses IoT hub as the blob endpoint for any storage requests that are made by the IoT Edge device.
+
+A: A blob storage module is used to provide a block blob storage solution for IoT Edge device and can be used for offline scenarios.
+
+
+
+A: 
+

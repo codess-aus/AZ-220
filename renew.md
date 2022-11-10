@@ -212,7 +212,24 @@ Q: A developer for a company has discovered that they are losing data during per
 
 A: A blob storage module is used to provide a block blob storage solution for IoT Edge device and can be used for offline scenarios.
 
+## Secure networks
+By default, IoT Hub's hostnames map to a public endpoint with a publicly routable IP address over the internet. This allows different customers to share this IoT Hub public endpoint, and ensures that IoT devices connecting over wide-area networks and on-premises networks can access your hub. However, there are situations where you might want to restrict access to your Azure resources. Azure IoT solutions support both IP filtering and virtual networks to help secure access when needed.
 
+For detailed information on securing network access, see the following resources:
 
-A: 
+* IoT Hub IP filtering: Use IP filters.
+* Virtual network support: IoT Hub support for virtual networks with Private Link and Managed Identity
+ 
+Q: When working to develop a secure IoT solution, which of the following tasks is typically assigned to the IoT developer role?
+* Make hardware tamper proof.
+* Protect against malicious activity.
+* Follow secure software development methodology.
 
+A: Among other things, the IoT developer is responsible for following a secure software development methodology.
+
+Q: A company is implementing a threat modeling process to help improve the security of their IoT solution. Which of the following answer choices lists the three primary areas of consideration within the threat modeling process?
+* Device security features, cloud security features, data security features.
+* Security and privacy features, features whose failures are security relevant, features that touch a trust boundary.
+* Hardware features, software features, cloud service features.
+
+A: Security and privacy features, features whose failures are security relevant, features that touch a trust boundary. In addition to evaluating the solution as a whole, threat modeling for an IoT solution should focus on these three areas.

@@ -233,3 +233,11 @@ Q: A company is implementing a threat modeling process to help improve the secur
 * Hardware features, software features, cloud service features.
 
 A: Security and privacy features, features whose failures are security relevant, features that touch a trust boundary. In addition to evaluating the solution as a whole, threat modeling for an IoT solution should focus on these three areas.
+
+Q: What is the purpose of the IoT Hub identity registry?
+A: The IoT Hub identity registry stores the device ID and authentication data for devices that can connect to IoT Hub.
+
+Q: What are the sections of a device twin file?
+A: A device twin includes sections for Tags, Desired properties, Reported properties, and Device identity properties.
+A device twin is a JSON document that includes sections for Tags, Desired properties, Reported properties, and Device identity properties.
+

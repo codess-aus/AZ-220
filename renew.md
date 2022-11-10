@@ -121,3 +121,17 @@ The IoT Edge runtime in a container provides a complete runtime that takes your 
 The IoT Edge device container is a complete IoT Edge device, ready to be launched on any machine with a container engine. The device container includes the IoT Edge runtime and a container engine itself. Each instance of the container is a fully functional self-provisioning IoT Edge device. The device container supports remote debugging of modules, as long as there is a network route to the module. The device container is good for quickly creating large numbers of IoT Edge devices to test at-scale scenarios or Azure Pipelines. It also supports deployment to kubernetes via helm.
 
 [Useful link](https://learn.microsoft.com/en-gb/training/modules/examine-iot-edge-module-development/4-module-development-test-tools)
+
+Q: IoT Edge modules share many characteristics with IoT devices. Which of the following choices accurately describes a characteristic of an IoT Edge module?
+* It can send device-to-cloud messages.
+* It can receive cloud-to-device messages
+* It can use the file upload feature.
+
+A: An IoT Edge module can send messages to the cloud via the IoT Edge hub.
+
+Q: Which of the following steps is commonly performed when creating a custom Edge module?
+* Use the Azure portal to create an Azure Container Registry for your Docker container images.
+* Use the IoT Edge dev tool to configure your production environment.
+* Use the IoT EdgeHub dev tool to install and configure the IoT Edge runtime.
+
+A: To create a custom Edge module, you will often use the Azure portal to create an Azure Container Registry for your Docker container images.

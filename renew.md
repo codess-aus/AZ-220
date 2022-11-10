@@ -135,3 +135,20 @@ Q: Which of the following steps is commonly performed when creating a custom Edg
 * Use the IoT EdgeHub dev tool to install and configure the IoT Edge runtime.
 
 A: To create a custom Edge module, you will often use the Azure portal to create an Azure Container Registry for your Docker container images.
+
+The agent-based option of Microsoft **Defender for IoT** includes the following components:
+
+* IoT Hub integration.
+* Device agents (optional).
+* Send security message SDK.
+* Analytics pipeline.
+
+Microsoft Defender for Cloud provides you the tools needed to harden your network, secure your services and make sure you're on top of your security posture.
+
+Microsoft Defender for IoT is enabled by default when an IoT Hub resource is created
+
+Rules in IoT Central serve as a customizable response tool that triggers on actively monitored events from connected devices.
+
+Q: What is the purpose of a Dashboard within an Azure IoT Central solution?
+A: A Dashboard is a customizable page that displays telemetry, property, and state information for selected devices.
+
